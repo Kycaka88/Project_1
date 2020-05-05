@@ -2,6 +2,7 @@ from flask import Flask, render_template
 import data
 
 app = Flask(__name__)
+
 title = data.title
 subtitle = data.subtitle
 description = data.description
@@ -46,4 +47,5 @@ def render_departures(current_departure):
 def render_tours(id):
    return render_template('tour.html', tours = tours[id], title = title, subtitle = subtitle, description = description, departures = departures)
 
-app.run()
+if __name__ == '__main__':
+    app.run()
