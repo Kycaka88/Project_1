@@ -23,7 +23,6 @@ def render_departures(current_departure):
    max_price = 0
    min_nights = 0
    max_nights = 0
-   test = 0
 
    # Фильтруем туры по выбранному направлению
    for key,value in tours.items():
