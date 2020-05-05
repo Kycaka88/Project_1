@@ -23,6 +23,7 @@ def render_departures(current_departure):
    max_price = 0
    min_nights = 0
    max_nights = 0
+   test = 0
 
    # Фильтруем туры по выбранному направлению
    for key,value in tours.items():
@@ -38,7 +39,7 @@ def render_departures(current_departure):
             min_nights = value["nights"]
          if max_nights <= value["nights"] or max_nights == 0:
             max_nights = value["nights"]
-   # Рендерим
+   # Рендерим шаблон
    return render_template('departure.html', tours = tours, filtered_tours = filtered_tours, title = title, departures = departures, current_departure = current_departure, count_tours = count_tours, min_price = min_price, max_price = max_price, min_nights = min_nights, max_nights = max_nights)
 
 
